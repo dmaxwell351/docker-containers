@@ -8,7 +8,7 @@ By default, the 30-day enterprise free trial is installed, but this can be chang
 docker run -d -p 8000:8000 -p 8089:8089 -p 9997:9997 -p 514:514 -v /mnt/user/appdata/splunk:/opt/splunk/var --name splunk dmaxwell/splunk
 ```
 
-Once the container is running, browse to: `http://<host>:8000` to compete the setup.
+Once the container is running, browse to: `http://<host>:8000` to complete the setup.
 
 ## Volumes
 
