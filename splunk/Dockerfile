@@ -31,7 +31,7 @@ RUN apt-get update -q && \
 	
 RUN wget -O /splunk-6.2.1-245427-linux-2.6-amd64.deb "http://www.splunk.com/page/download_track?file=6.2.1/splunk/linux/splunk-6.2.1-245427-linux-2.6-amd64.deb&ac=test_modal_enterprise&wget=true&name=wget&platform=Linux&architecture=x86_64&version=6.2.1&product=splunk&typed=release"
 
-dpkg -i /splunk-6.2.1-245427-linux-2.6-amd64.deb
+RUN dpkg -i /splunk-6.2.1-245427-linux-2.6-amd64.deb
 
 ### Configure Service Startup
 COPY rc.local /etc/rc.local
