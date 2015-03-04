@@ -4,9 +4,8 @@
   <Description>
     [h3]splunk[/h3]Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations.[br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
-    [b]Browse to http://host:8000 to continue the setup.[/b][br][br]
-    [b]/opt/splunk/var[/b] : this path is where splunk will store it\'s configuration files and database.[br]
-    [b]/data[/b] : if mapped, this path can be added to splunk to monitor the host.[br]
+    [b]/opt/splunk/var[/b] : this path is where splunk will store it\'s configuration files and databases.[br]
+    [b]/data[/b] : if mapped, this path can be added to splunk to monitor the host (i.e. /var/log).[br]
 	[b]/license[/b] : if mapped, this path should hold the license file if wanting to use splunk enterprise.[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/splunk/</Registry>
@@ -48,6 +47,6 @@
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <Banner>https://digitalguardian.com/sites/default/files/splunk-logo.png</Banner>
-  <Icon>https://pbs.twimg.com/profile_images/458992039850287104/zBXrlkRY.png</Icon>
+  <Banner>http://i.imgur.com/eddJlVg.png</Banner>
+  <Icon>http://i.imgur.com/KKoQMo6.png</Icon>
 </Container>
