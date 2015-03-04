@@ -36,7 +36,7 @@ RUN dpkg -i /splunk-6.2.1-245427-linux-2.6-amd64.deb
 ### Configure Service Startup
 COPY rc.local /etc/rc.local
 RUN chmod a+x /etc/rc.local && \
-    chown -R nobody:users /opt/splunk/var
+    chown -R nobody:users /opt/splunk
 
 EXPOSE 8000 8089 9997 514
 
