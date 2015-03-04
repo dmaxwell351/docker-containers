@@ -1,20 +1,13 @@
 ### Dockerfile for splunk
-
-# Use phusion/baseimage as base image. To make your builds reproducible, make
-# sure you lock down to a specific version, not to `latest`!
-# See https://github.com/phusion/baseimage-docker/blob/master/Changelog.md for
-# a list of version numbers.
 FROM phusion/baseimage:0.9.16
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
-# Set correct environment variables.
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-# Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
 # Configure user nobody to match unRAID's settings
@@ -24,7 +17,7 @@ RUN usermod -u 99 nobody && \
     chown -R nobody:users /home
 
 # Disable SSH
-#RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 RUN apt-get update -q && \
 	apt-get install -y wget
