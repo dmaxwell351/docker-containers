@@ -25,6 +25,7 @@ RUN \
   apt-get update && \
   apt-get install -y nginx inotify-tools && \
   apt-get install -y python python-dev python-pip python-virtualenv && \
+  apt-get install -y git && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/* && \
   cp /etc/nginx/nginx.conf /etc/nginx/nginx-template.conf  && \
@@ -42,8 +43,10 @@ EXPOSE 80 443
 
 # Clone Codiad
 RUN cd /var/www && \
-	git clone https://github.com/Codiad/Codiad.git && \
-	mkdir -p /var/www/Codiad/pythonhost
+	git clone --bare https://github.com/Codiad/Codiad.git && \
+	mkdir -p /var/www/Codiad/pythonhost && \
+	chown -R www-data:www-data /var/www && \
+	chmod -R 666 /var/www
 
 # Copy over default nginx config for Codiad
 COPY default /etc/nginx/sites-enabled/default
