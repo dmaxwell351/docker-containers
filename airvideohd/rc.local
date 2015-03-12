@@ -1,0 +1,3 @@
+#!/bin/sh
+/AirVideoServerHD --config=/config/server.properties
+exit 0
