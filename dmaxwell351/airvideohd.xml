@@ -6,7 +6,7 @@
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
     [b]/config[/b] : this path is where the Air Video HD config file and logs will be.[br]
     [b]/conversionPath[/b] : if mapped, this is where temporary files will be kept by the transcoder.[br]
-	[b]/videos[/b] : this the default path for share1.[br]
+	[b]/videos[/b] : this is the default path for share1.[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/airvideohd/</Registry>
   <Repository>dmaxwell/airvideohd</Repository>
