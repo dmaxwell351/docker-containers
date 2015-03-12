@@ -35,7 +35,6 @@ RUN tar jxf /airvideoserverhd-2.1.0-beta3.tar.bz2
 
 # Copy default 
 COPY server.properties /server.properties.new
-RUN 
 
 ### Configure Service Startup
 COPY rc.local /etc/rc.local
