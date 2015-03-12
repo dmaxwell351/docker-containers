@@ -35,13 +35,14 @@ RUN tar jxf /airvideoserverhd-2.1.0-beta3.tar.bz2
 
 # Copy default 
 COPY server.properties /server.properties.new
-RUN cp -n /server.properties.new /config/server.properties
+RUN 
 
 ### Configure Service Startup
 COPY rc.local /etc/rc.local
 RUN chmod a+x /etc/rc.local && \
 	mkdir -p /config/logs && \
-    chown -R nobody:users /config && \
+	cp -n /server.properties.new /config/server.properties && \
+	chown -R nobody:users /config && \
 	mkdir /conversionPath && \
 	chown -R nobody:users /conversionPath && \
 	mkdir /videos && \
