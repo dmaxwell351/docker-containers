@@ -47,6 +47,9 @@ RUN chmod a+x /etc/rc.local && \
 	mkdir /videos && \
 	chown -R nobody:users /videos
 
+RUN mkdir /etc/service/airvideohd
+ADD airvideohd.sh /etc/service/airvideohd/run
+	
 EXPOSE 45633
 
 VOLUME ["/config", "/conversionPath", "/videos"]
