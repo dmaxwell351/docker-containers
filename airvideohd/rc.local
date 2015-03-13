@@ -3,6 +3,4 @@ mkdir -p /config/logs
 cp -n /server.properties.new /config/server.properties
 chown -R nobody:users /config
 chown -R nobody:users /conversionPath
-chown -R nobody:users /videos
-/AirVideoServerHD --config=/config/server.properties
 exit 0
