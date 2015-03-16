@@ -3,7 +3,8 @@
   <Name>Air Video HD</Name>
   <Description>
     [h3]Air Video HD[/h3]Everything that was great about Air Video, re-thought and re-engineered to bring you the best and most reliable streaming video app for iOS devices.[br][br]
-    See the configuration options in the server.properties file in your /config path. To find your server PIN, check the network.log file in /config/logs after the server has started.[br][br][b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
+    [b][span style=\'color: #E80000;\']Configuration:[/span][/b][br]
+ Edit the file server.properties in your /config path. Follow the instructions in the file to add shares and users. Restart the container after saving your changes. To find your Server PIN, look in the network.log file in /config/logs after the server has started.[br][br][b][span style=\'color: #E80000;\']Volumes:[/span][/b][br]
     [b]/config[/b] : this path is where the Air Video HD config file and logs will be.[br]
     [b]/conversionPath[/b] : if mapped, this is where temporary files will be kept by the transcoder.[br]
 	[b]/videos[/b] : this is the default path for share1.[br]
