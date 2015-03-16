@@ -3,12 +3,12 @@ This is a Dockerfile setup for Air Video HD - http://www.inmethod.com
 ## Usage
 
 ```
-docker run -d -p 45633:45633 -v /mnt/user/appdata/airvideohd:/config -v /mnt/user/Media:/videos -v /mnt/user/appdata/airvideohd/temp:/conversionPath --name airvideohd dmaxwell/airvideohd
+docker run -d --net=host -v /mnt/user/appdata/airvideohd:/config -v /mnt/user/Media:/videos -v /mnt/user/appdata/airvideohd/temp:/conversionPath --name airvideohd dmaxwell/airvideohd
 ```
 
 ## Configuration
 
-Edit the file server.properties in your /config path. Follow the instructions in the file to add shares and users. Restart the container after saving your changes.
+Edit the file server.properties in your /config path. Follow the instructions in the file to add shares and users. Restart the container after saving your changes. To find your Server PIN, look in the network.log file in /config/logs after the server has started.
 
 ## Volumes
 
