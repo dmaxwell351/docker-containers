@@ -61,7 +61,7 @@ RUN \
 
 RUN mkdir -p /database
 ADD pydio.db /pydio.db
-RUN cp -n /database/pydio.db
+RUN cp -n /pydio.db /database/pydio.db
 
 ADD .htaccess /.htaccess
 RUN cp -n /.htaccess /pydio/.htaccess
