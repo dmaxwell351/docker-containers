@@ -19,14 +19,15 @@ RUN usermod -u 99 nobody && \
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-# Add Pydio repo
+# Install wget
+RUN \
+  apt-get update && \
+  apt-get install -y wget
+
+  # Add Pydio repo
 RUN echo "deb http://dl.ajaxplorer.info/repos/apt stable main" >> /etc/apt/sources.list
 RUN echo "deb-src http://dl.ajaxplorer.info/repos/apt stable main" >> /etc/apt/sources.list
 
-# Install wget
-RUN \
-  apt-get install -y wget
-  
 RUN \
   wget  http://dl.ajaxplorer.info/repos/charles@ajaxplorer.info.gpg.key && \
   apt-key add charles@ajaxplorer.info.gpg.key
