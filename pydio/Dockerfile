@@ -49,26 +49,27 @@ RUN \
 
 RUN \
   mkdir -p /pydio && \
-  chmod 777 /pydio && \
+  chmod 666 /pydio && \
   chown nobody:users /pydio && \
-  cp -Rn /usr/share/pydio/* /pydio/. && \
+  cp -rnp /usr/share/pydio/* /pydio/. && \
   rm -R /usr/share/pydio && \
   ln -s /pydio /usr/share/pydio
 
 RUN \
   mkdir -p /data && \
-  chmod 777 /data && \
+  chmod 666 /data && \
   chown nobody:users /data && \
-  cp -Rn /usr/share/pydio/data/* /data/. && \
+  cp -rnp /usr/share/pydio/data/* /data/. && \
   rm -R /usr/share/pydio/data && \
   ln -s /data /usr/share/pydio/data
 
 RUN \
   mkdir -p /database && \
-  chmod 777 /database && \
+  chmod 666 /database && \
   chown nobody:users /database
+
 ADD pydio.db /pydio.db
-RUN cp -n /pydio.db /database/pydio.db
+RUN cp -np /pydio.db /database/pydio.db
 
 ADD .htaccess /.htaccess
 RUN cp -n /.htaccess /pydio/.htaccess
