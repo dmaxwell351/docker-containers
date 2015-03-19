@@ -52,7 +52,8 @@ RUN \
   chmod 666 /pydio && \
   chown nobody:users /pydio && \
   cp -rnp /usr/share/pydio/* /pydio/. && \
-  rm -R /usr/share/pydio && \
+  mv /usr/share/pydio /usr/share/pydio.orig && \
+  #  rm -R /usr/share/pydio && \
   ln -s /pydio /usr/share/pydio
 
 RUN \
@@ -73,6 +74,8 @@ RUN cp -np /pydio.db /database/pydio.db
 
 ADD .htaccess /.htaccess
 RUN cp -n /.htaccess /pydio/.htaccess
+
+RUN service apache2 restart
 
 VOLUME ["/pydio", "/database", "/data"]
 
