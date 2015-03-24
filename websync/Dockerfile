@@ -26,7 +26,9 @@ RUN \
 
 RUN \
   apt-get update -qq && \
-  apt-get install -qy git nodejs npm sshpass
+  apt-get install -qy git nodejs npm sshpass && \
+  apt-get -qy upgrade && \
+  ln -s /usr/bin/nodejs /usr/local/bin/node
 
 RUN \
   apt-get clean -y && \
@@ -36,17 +38,17 @@ RUN \
   cd ~ && \
   git clone https://github.com/furier/websync.git
 
-#RUN \
-#  cd ~/websync && \
-#  npm install
+RUN \
+  cd ~/websync && \
+  npm install
 
-#RUN \
-#  cd ~/websync && \
-#  npm install -g bower
+RUN \
+  cd ~/websync && \
+  npm install -g bower
 
-#RUN \
-#  cd ~/websync && \
-#  bower install
+RUN \
+  cd ~/websync && \
+  bower install
 
 RUN mkdir /etc/service/websync
 ADD websync.sh /etc/service/websync/run
