@@ -26,7 +26,7 @@ RUN \
 
 RUN \
   apt-get update -qq && \
-  apt-get install -qy git nodejs sshpass
+  apt-get install -qy git nodejs npm sshpass
 
 RUN \
   apt-get clean -y && \
