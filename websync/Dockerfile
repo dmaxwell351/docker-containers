@@ -34,11 +34,19 @@ RUN \
 
 RUN \
   cd ~ && \
-  git clone https://github.com/furier/websync.git && \
-  cd websync && \
-  npm install && \
-  npm install -g bower && \
-  bower install
+  git clone https://github.com/furier/websync.git
+
+#RUN \
+#  cd ~/websync && \
+#  npm install
+
+#RUN \
+#  cd ~/websync && \
+#  npm install -g bower
+
+#RUN \
+#  cd ~/websync && \
+#  bower install
 
 RUN mkdir /etc/service/websync
 ADD websync.sh /etc/service/websync/run
