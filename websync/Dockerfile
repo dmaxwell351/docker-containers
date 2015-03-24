@@ -19,10 +19,12 @@ RUN usermod -u 99 nobody && \
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-# Install requirements
+# Install Dependencies
 RUN \
-  apt-get update && \
-  apt-get install -y git, nodejs, sshpass && \
+  add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse" && \
+  add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse" && \
+  apt-get update -qq && \
+  apt-get install -qy git, nodejs, sshpass && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
 
@@ -34,9 +36,8 @@ RUN \
   npm install -g bower && \
   bower install
 
-RUN \
-  cd ~/dist && \
-  node server.js
+RUN mkdir /etc/service/websync
+ADD websync.sh /etc/service/websync/run
 
 VOLUME ["/unRAID", "/config"]
 
