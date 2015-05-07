@@ -28,7 +28,7 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 # Download AirVideoHD
-RUN wget -O /airvideoserverhd-2.1.0-beta3.tar.bz2 "https://s3.amazonaws.com/AirVideoHD/Download/airvideoserverhd-2.1.0-beta3.tar.bz2"
+RUN wget -O /airvideoserverhd-2.1.0-beta3.tar.bz2 "https://s3.amazonaws.com/AirVideoHD/Download/AirVideoServerHD-2.1.3.tar.bz2"
 
 # Decompress AirVideoHD
 RUN tar jxf /airvideoserverhd-2.1.0-beta3.tar.bz2
