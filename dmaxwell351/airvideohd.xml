@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video</Category>
   <Name>Air Video HD</Name>
   <Description>
     [h3]Air Video HD[/h3]Everything that was great about Air Video, re-thought and re-engineered to bring you the best and most reliable streaming video app for iOS devices.[br][br]
