@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Category></Category>
+  <Name>Jackett</Name>
+  <Description>
+    [h3]Jackett[/h3]This software creates a Torznab API server on your machine that any Torznab enabled software can consume. Jackett works as a proxy server: it translates Torznab queries into tracker-site-specific http queries, parses the html response into Torznab results, then sends results back to the requesting software.[br][br]
+    [b][span style=\'color: #E80000;\']Configuration:[/span][/b][br]
+ [br][br][b][span style=\'color: #E80000;\']Volumes:[/span][/b][br]
+    [b]/config[/b] : this path is where the Jackett config files will be.[br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/sensei73/jackett/</Registry>
+  <Repository>sensei73/jackett</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Port>
+        <HostPort>9117</HostPort>
+        <ContainerPort>9117</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/jackett</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:9117]/</WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+</Container>
