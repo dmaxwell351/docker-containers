@@ -23,7 +23,7 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN \
   apt-get update && \
   apt-get install -y vlc && \
-  apt-get install -y wget
+  apt-get install -y wget && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
 
