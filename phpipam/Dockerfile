@@ -28,7 +28,11 @@ RUN apt-get update && \
 COPY docker-php-ext-install /usr/bin/
 COPY docker-php-ext-enable /usr/bin/
 COPY docker-php-ext-configure /usr/bin/
-	
+
+RUN chmod a+x /usr/bin/docker-php-ext-install && \
+    chmod a+x /usr/bin/docker-php-ext-enable && \
+    chmod a+x /usr/bin/docker-php-ext-configure
+
 # Configure apache and required PHP modules 
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd && \
 	docker-php-ext-install mysqli && \
