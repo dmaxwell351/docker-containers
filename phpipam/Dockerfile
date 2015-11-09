@@ -48,6 +48,7 @@ RUN chmod a+x /usr/bin/docker-php-ext-install && \
 COPY php.ini /usr/local/etc/php/
 
 # Copy phpipam sources to web dir
+RUN mkdir -p /var/www/html
 ADD https://github.com/phpipam/phpipam/archive/1.2_beta2.tar.gz /tmp/
 RUN	tar -xzf /tmp/1.2_beta2.tar.gz -C /var/www/html/ --strip-components=1 
 
