@@ -50,13 +50,13 @@ COPY php.ini /usr/local/etc/php/
 # Copy phpipam sources to web dir
 RUN mkdir -p /var/www/html
 ADD https://github.com/phpipam/phpipam/archive/1.2_beta2.tar.gz /tmp/
-RUN	tar -xzf /tmp/1.2_beta2.tar.gz -C /var/www/html/ --strip-components=1 
+RUN tar -xzf /tmp/1.2_beta2.tar.gz -C /var/www/html/ --strip-components=1
 
-RUN sed -i \ 
-	-e "s/\['host'\] = \"localhost\"/\['host'\] = \"mysql\"/" \ 
-    -e "s/\['user'\] = \"phpipam\"/\['user'\] = \"root\"/" \ 
-    -e "s/\['pass'\] = \"phpipamadmin\"/\['pass'\] = getenv(\"MYSQL_ENV_MYSQL_ROOT_PASSWORD\")/" \ 
-	/var/www/html/config.php
+#RUN sed -i \ 
+#	-e "s/\['host'\] = \"localhost\"/\['host'\] = \"mysql\"/" \ 
+#    -e "s/\['user'\] = \"phpipam\"/\['user'\] = \"root\"/" \ 
+#    -e "s/\['pass'\] = \"phpipamadmin\"/\['pass'\] = getenv(\"MYSQL_ENV_MYSQL_ROOT_PASSWORD\")/" \ 
+#	/var/www/html/config.php
 	
 EXPOSE 80
 
