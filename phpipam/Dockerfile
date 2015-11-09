@@ -24,6 +24,11 @@ RUN apt-get update && \
 	apt-get install -y git php-pear php5-curl php5-mysql php5-json php5-gmp php5-mcrypt php5-ldap libgmp-dev && \
 	rm -rf /var/lib/apt/lists/*
 
+# Add scripts from php docker image
+COPY docker-php-ext-install /usr/bin/
+COPY docker-php-ext-enable /usr/bin/
+COPY docker-php-ext-configure /usr/bin/
+	
 # Configure apache and required PHP modules 
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd && \
 	docker-php-ext-install mysqli && \
