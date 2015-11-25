@@ -4,7 +4,7 @@
   <Category>Network:Management</Category>
   <Name>splunk</Name>
   <Description>
-    [h3]splunk[/h3]Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations.[br][br]
+    Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server![br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
     [b]/opt/splunk/var[/b] : this path is where splunk will store it\'s configuration files and databases.[br]
     [b]/data[/b] : if mapped, this path can be added to splunk to monitor the host (i.e. /var/log).[br]
@@ -47,7 +47,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version></Version>
+  <Version>6.3.1</Version>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Banner>http://i.imgur.com/eddJlVg.png</Banner>
   <Icon>http://i.imgur.com/KKoQMo6.png</Icon>
