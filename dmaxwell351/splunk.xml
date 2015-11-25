@@ -2,14 +2,25 @@
 <Container>
   <Beta>False</Beta>
   <Category>Network:Management</Category>
+  <Overview>Splunk is a remote syslog server that accepts any data feed.</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38548.0</Support>
+  <Date>11/25/2015</Date>
   <Name>splunk</Name>
   <Description>
-    Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server![br][br]
+    [h3]splunk[/h3] Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server![br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
     [b]/opt/splunk/var[/b] : this path is where splunk will store it\'s configuration files and databases.[br]
     [b]/data[/b] : if mapped, this path can be added to splunk to monitor the host (i.e. /var/log).[br]
 	[b]/license[/b] : if mapped, this path should hold the license file if wanting to use splunk enterprise.[br]
   </Description>
+  <Changes>
+  	[center][font size=5]splunk Change Log[/font][/center]
+	[font size=4]2015.03.04[/font]
+	- Initial Release
+
+	[font size=4]2015.11.25[/font]
+	- Updated splunk to v6.3.1
+  </Changes>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/splunk/</Registry>
   <Repository>dmaxwell/splunk</Repository>
   <BindTime>true</BindTime>
