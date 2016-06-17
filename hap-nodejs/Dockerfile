@@ -21,7 +21,7 @@ RUN usermod -u 99 nobody && \
 # Update things
 RUN apt-get update
 
-ADD git@github.com:KhaosT/HAP-NodeJS /home/app
+RUN git clone https://github.com/KhaosT/HAP-NodeJS.git /home/app
 
 RUN cd /home/app && \
     npm install && \
