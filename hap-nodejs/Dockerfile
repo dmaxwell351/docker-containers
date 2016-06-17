@@ -12,6 +12,9 @@ ENV LANGUAGE en_US.UTF-8
 
 CMD ["/sbin/my_init"]
 
+# Add python
+RUN /pd_build/python.sh
+
 # Configure user nobody to match unRAID's settings
 RUN usermod -u 99 nobody && \
     usermod -g 100 nobody && \
