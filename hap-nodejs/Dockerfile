@@ -1,5 +1,5 @@
 ### Dockerfile for hap-nodejs
-FROM phusion/passenger-nodejs:0.9.18
+FROM phusion/passenger-customizable:0.9.18
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 ENV HOME /root
@@ -13,7 +13,9 @@ ENV LANGUAGE en_US.UTF-8
 CMD ["/sbin/my_init"]
 
 # Add python
+RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
+RUN /pd_build/nodejs.sh
 
 # Configure user nobody to match unRAID's settings
 RUN usermod -u 99 nobody && \
