@@ -24,15 +24,16 @@ RUN usermod -u 99 nobody && \
     chown -R nobody:users /home
 
 # Update things
-RUN apt-get update
+RUN apt-get update && \
+    apt-get install libavahi-compat-libdnssd-dev
 
 RUN git clone https://github.com/KhaosT/HAP-NodeJS.git && \
     cd HAP-NodeJS && \
 	mv * /home/app/.
 
-#RUN cd /home/app && \
-#    npm install && \
-#	node BridgedCore.js
+RUN cd /home/app && \
+    npm install && \
+	node BridgedCore.js
 	
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
