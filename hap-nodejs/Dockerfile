@@ -33,7 +33,7 @@ RUN git clone https://github.com/KhaosT/HAP-NodeJS.git && \
 
 RUN cd /home/app && \
     npm install && \
-	node BridgedCore.js
+#	node BridgedCore.js
 	
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
