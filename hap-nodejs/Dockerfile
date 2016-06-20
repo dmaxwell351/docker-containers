@@ -25,7 +25,7 @@ RUN usermod -u 99 nobody && \
 
 # Update things
 RUN apt-get update && \
-    apt-get install libavahi-compat-libdnssd-dev
+    apt-get install -y libavahi-compat-libdnssd-dev
 
 RUN git clone https://github.com/KhaosT/HAP-NodeJS.git && \
     cd HAP-NodeJS && \
