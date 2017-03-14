@@ -19,11 +19,15 @@ RUN usermod -u 99 nobody && \
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
+# Add h.265 repo
+RUN apt-add-repository ppa:strukturag/libde265
+
 # Install VLC
 RUN \
   apt-get update && \
   apt-get install -y vlc && \
   apt-get install -y wget && \
+  apt-get install -y vlc-plugin-libde265 && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
 
