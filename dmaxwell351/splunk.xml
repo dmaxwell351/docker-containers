@@ -20,6 +20,9 @@
 
 	[font size=4]2015.11.25[/font]
 	- Updated splunk to v6.3.1
+	  
+	[font size=4]2017.04.03[/font]
+	- Updated splunk to v6.5.3
   </Changes>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/splunk/</Registry>
   <Repository>dmaxwell/splunk</Repository>
@@ -58,7 +61,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version>6.3.1</Version>
+  <Version>6.5.3</Version>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Banner>http://i.imgur.com/eddJlVg.png</Banner>
   <Icon>http://i.imgur.com/KKoQMo6.png</Icon>
