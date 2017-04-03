@@ -1,6 +1,6 @@
 This is a Dockerfile setup for splunk - http://www.splunk.com
 
-By default, the 30-day enterprise free trial is installed, but this can be changed to the free 500MB/day version at any time.
+By default, the 60-day enterprise free trial is installed, but this can be changed to the free 500MB/day version at any time.
 
 ## Usage
 
