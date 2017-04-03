@@ -21,6 +21,9 @@
 
 	[font size=4]2015.10.30[/font]
 	- Updated Air Video HD server to v2.2.0
+	  
+	[font size=4]2017.03.14[/font]
+	- Add support for h.265
   </Changes>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/airvideohd/</Registry>
   <Repository>dmaxwell/airvideohd</Repository>
