@@ -31,8 +31,7 @@ COPY rc.local /etc/rc.local
 RUN chmod a+x /etc/rc.local && \
     chown -R nobody:users /opt/splunk
 
-# Ports Splunk Web, Splunk Daemon, KVStore, Splunk Indexing Port, Network Input, HTTP Event Collector
-EXPOSE 8000/tcp 8089/tcp 8191/tcp 9997/tcp 1514 8088/tcp
+EXPOSE 8000 8089 9997 514
 
 VOLUME ["/opt/splunk/var", "/data", "/license"]
 
