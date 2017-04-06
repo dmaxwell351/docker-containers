@@ -30,6 +30,8 @@ RUN dpkg -i /splunk-6.5.3-36937ad027d4-linux-2.6-amd64.deb
 COPY rc.local /etc/rc.local
 RUN chmod a+x /etc/rc.local && \
     chown -R nobody:users /opt/splunk
+    
+RUN echo "OPTIMISTIC_ABOUT_FILE_LOCKING = 1" >> $SPLUNK_HOME/etc/splunk-launch.conf
 
 EXPOSE 8000 8089 9997 514
 
