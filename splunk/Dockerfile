@@ -3,6 +3,7 @@ FROM phusion/baseimage:0.9.16
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 ENV HOME /root
+ENV SPLUNK_HOME=/opt/splunk
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
