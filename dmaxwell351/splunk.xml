@@ -4,7 +4,7 @@
   <Category>Network:Management</Category>
   <Overview>Splunk is a remote syslog server that accepts any data feed.</Overview>
   <Support>http://lime-technology.com/forum/index.php?topic=38548.0</Support>
-  <Date>11/25/2015</Date>
+  <Date>4/6/2017</Date>
   <Name>splunk</Name>
   <Description>
     [h3]splunk[/h3] Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server![br][br]
