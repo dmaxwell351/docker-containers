@@ -1,5 +1,5 @@
 ### Dockerfile for airvideohd
-FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage:0.9.22
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 ENV HOME /root
@@ -16,20 +16,14 @@ RUN usermod -u 99 nobody && \
     usermod -d /home nobody && \
     chown -R nobody:users /home
 
-# Disable SSH
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
-
-# Add h.265 repo
-RUN apt-add-repository ppa:strukturag/libde265
-
 # Install VLC
 RUN \
   apt-get update && \
-  apt-get install -y vlc && \
+  apt-get install -y vlc-nox && \
   apt-get install -y wget && \
-  apt-get install -y vlc-plugin-libde265 && \
+  apt-get install -y bzip2 && \
   apt-get clean -y && \
-  rm -rf /var/lib/apt/lists/*
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Download AirVideoHD
 RUN wget -O /AirVideoServerHD-2.2.3.tar.bz2 "https://s3.amazonaws.com/AirVideoHD/Download/AirVideoServerHD-2.2.3.tar.bz2"
