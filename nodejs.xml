@@ -17,7 +17,7 @@
 	- Initial Release
   </Changes>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/nodejsbeta/</Registry>
-  <Repository>dmaxwell/nodejs</Repository>
+  <Repository>dmaxwell/nodejsbeta</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
