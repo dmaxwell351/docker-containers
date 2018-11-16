@@ -22,6 +22,11 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /var/run/sshd
 
+COPY ./docker-entrypoint.sh /usr/local/bin
+
+RUN chmod a+x /usr/local/bin/docker-entrypoint.sh \
+  && ln -s /usr/local/bin/docker-entrypoint.sh /
+
 EXPOSE 22
 
 VOLUME ["/config", "/home/ec2-user/environment/project"]
