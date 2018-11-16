@@ -22,9 +22,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /var/run/sshd
 
-COPY ./docker-entrypoint.sh /usr/local/bin
+COPY docker-entrypoint.sh /usr/local/bin/
 
-RUN chmod a+x /usr/local/bin/docker-entrypoint.sh \
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
 EXPOSE 22
