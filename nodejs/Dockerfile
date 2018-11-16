@@ -22,10 +22,11 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /var/run/sshd
 RUN mkdir -p /root/auth
+RUN mkdir -p /root/.ssh
 RUN cp /root/auth/authorized_keys /root/.ssh/authorized_keys 2>/dev/null || :
 RUN chmod 700 /root/.ssh
-RUN chmod 400 /root/.ssh/authorized_keys
-RUN chown root. /root/.ssh/authorized_keys
+RUN chmod 400 /root/.ssh/authorized_keys 2>/dev/null || :
+RUN chown root. /root/.ssh/authorized_keys 2>/dev/null || :
 CMD /usr/sbin/sshd -D
 
 EXPOSE 22
