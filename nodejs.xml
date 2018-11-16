@@ -9,10 +9,11 @@
   <Description>
     [h3]nodejs[/h3] nodejs[br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
-    [b]/root/auth[/b] : this path is where the container will look for the file authorized_keys[br]
+    [b]/config[/b] : this path is where the container will look for the file authorized_keys[br]
+    [b]/home/ec2-user/environment/project[/b] : this path will be available to the AWS Cloud9 environment[br]
   </Description>
   <Changes>
-  	[center][font size=5]splunk Change Log[/font][/center]
+  	[center][font size=5]nodejs Change Log[/font][/center]
 	[font size=4]2018.11.16[/font]
 	- Initial Release
   </Changes>
@@ -33,8 +34,13 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/nodejs</HostDir>
-      <ContainerDir>/root/auth</ContainerDir>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/ec2-user/environment/project</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
