@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Category>Other</Category>
+  <Overview>nodejs overview</Overview>
+  <Support></Support>
+  <Date>11/16/2018</Date>
+  <Name>nodejs</Name>
+  <Description>
+    [h3]nodejs[/h3] nodejs[br][br]
+    [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
+    [b]/root/auth[/b] : this path is where the container will look for the file authorized_keys[br]
+  </Description>
+  <Changes>
+  	[center][font size=5]splunk Change Log[/font][/center]
+	[font size=4]2018.11.16[/font]
+	- Initial Release
+  </Changes>
+  <Registry>https://registry.hub.docker.com/u/dmaxwell/nodejsbeta/</Registry>
+  <Repository>dmaxwell/nodejs</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>22222</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nodejs</HostDir>
+      <ContainerDir>/root/auth</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.0.0</Version>
+  <WebUI></WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+</Container>
