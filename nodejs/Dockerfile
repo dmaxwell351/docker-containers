@@ -15,7 +15,7 @@ RUN usermod -u 99 nobody && \
 
 # Update and install things
 RUN apt-get update && \
-    apt-get install -y python-software-properties python nodejs npm git-core openssh-server
+    apt-get install -y software-properties-common python3 nodejs npm git-core openssh-server
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
