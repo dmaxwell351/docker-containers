@@ -26,6 +26,8 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
+RUN curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash
+
 #RUN echo "ubuntu:$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | chpasswd
 #RUN echo "ubuntu:ubuntu" | chpasswd
 
