@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM cloud9/ws-nodejs
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 ENV HOME /root
@@ -15,17 +15,18 @@ RUN usermod -u 99 nobody && \
 
 # Update and install things
 RUN apt-get update && \
-    apt-get install -y software-properties-common python3 nodejs npm git-core openssh-server
+    apt-get install -y openssh-server
 
-# Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get install -y nodejs && ln -s /usr/bin/nodejs /usr/bin/node
 
-RUN mkdir /var/run/sshd
+RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
   && ln -s /usr/local/bin/docker-entrypoint.sh /
+
+RUN echo "ubuntu:$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | chpasswd
 
 EXPOSE 22
 
