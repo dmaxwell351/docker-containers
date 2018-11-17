@@ -31,6 +31,6 @@ EXPOSE 22
 
 VOLUME ["/config", "/home/ec2-user/environment/project"]
 
-#ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 ### END
