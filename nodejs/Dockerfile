@@ -27,7 +27,7 @@ RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
 #RUN echo "ubuntu:$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | chpasswd
-RUN echo "ubuntu:ubuntu" | chpasswd
+#RUN echo "ubuntu:ubuntu" | chpasswd
 
 EXPOSE 22
 
