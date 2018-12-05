@@ -2,23 +2,23 @@
 <Container>
   <Beta>True</Beta>
   <Category>Other</Category>
-  <Overview>nodejs overview</Overview>
+  <Overview>aws-cloud9-ssh overview</Overview>
   <Support></Support>
-  <Date>11/16/2018</Date>
-  <Name>nodejs</Name>
+  <Date>12/05/2018</Date>
+  <Name>aws-cloud9-ssh</Name>
   <Description>
-    [h3]nodejs[/h3] nodejs[br][br]
+    [h3]aws-cloud9-ssh[/h3] aws-cloud9-ssh[br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
     [b]/config[/b] : this path is where the container will look for the file authorized_keys[br]
     [b]/home/ec2-user/environment/project[/b] : this path will be available to the AWS Cloud9 environment[br]
   </Description>
   <Changes>
   	[center][font size=5]nodejs Change Log[/font][/center]
-	[font size=4]2018.11.16[/font]
+	[font size=4]2018.12.05[/font]
 	- Initial Release
   </Changes>
-  <Registry>https://registry.hub.docker.com/u/dmaxwell/nodejsbeta/</Registry>
-  <Repository>dmaxwell/nodejsbeta</Repository>
+  <Registry>https://registry.hub.docker.com/u/dmaxwell/aws-cloud9-ssh/</Registry>
+  <Repository>dmaxwell/aws-cloud9-ssh</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
