@@ -12,7 +12,12 @@
   [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
   [b]22[/b] The SSH port to connect to via AWS Cloud9. Use a random port that can be made available externally (port-forwared). [br]&#xD;
   [b]/config[/b] This path is where the container will look for the file authorized_keys. Within this file should be the public SSH key provided to you when configuring a new AWS Cloud9 environment. [br]&#xD;
-  [b]/home/ec2-user/environment/project[/b] This path will serve as the workspace within the AWS Cloud9 environment. [br]&#xD;
+  [b]/home/ec2-user/environment/project[/b] This path will serve as the workspace within the AWS Cloud9 environment. [br][br]&#xD;
+  [b][u][span style='color: #E80000;']Directions[/span][/u][/b][br]&#xD;
+  Browse to https://aws.amazon.com/cloud9 and click the Get started with AWS Cloud9 button. Choose to create a new environment.[br]&#xD;
+  On the settings page, choose "Connect and run in remote server (SSH)".[br]&#xD;
+  You will need to copy the provided public SSH key to a file named authorized_keys within the /config directory mapped earlier.[br]&#xD;
+  The SSH username should be "ubuntu" and provide your public WAN address and port forwared to the port configured above.
   </Overview>
   <Category>Cloud: Productivity: Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/aws-cloud9-ssh.xml</TemplateURL>
