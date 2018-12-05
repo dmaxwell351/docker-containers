@@ -8,11 +8,11 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project></Project>
-  <Overview>This docker is an SSH endpoint for using as a remote host for AWS Cloud9. It will allow you to work with a local workspace on your unRAID system from within an AWS Cloud9 instance. [br][br]&#xD;
+  <Overview>This docker is an SSH endpoint for use as a remote host for AWS Cloud9. It will allow you to work with a local workspace on your unRAID system from within an AWS Cloud9 instance. [br][br]&#xD;
   [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
-  [b]22[/b] The SSH port to connect to via AWS Cloud9. Use a different port than 22 so it does not interfere with unRAID. [br]&#xD;
-  [b]/config[/b] This path is where the container will look for the file authorized_keys [br]&#xD;
-  [b]/home/ec2-user/environment/project[/b] This path will be available to the AWS Cloud9 environment [br]&#xD;
+  [b]22[/b] The SSH port to connect to via AWS Cloud9. Use a random port that can be made available externally (port-forwared). [br]&#xD;
+  [b]/config[/b] This path is where the container will look for the file authorized_keys. Within this file should be the public SSH key provided to you when configuring a new AWS Cloud9 environment. [br]&#xD;
+  [b]/home/ec2-user/environment/project[/b] This path will serve as the workspace within the AWS Cloud9 environment. [br]&#xD;
   </Overview>
   <Category>Cloud: Productivity: Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/aws-cloud9-ssh.xml</TemplateURL>
