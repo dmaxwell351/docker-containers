@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project></Project>
-  <Overview>This docker is an SSH endpoint for using as a remote host for AWS Cloud9. It will allow you to work with a local workspace on your unRAID system from within an AWS Cloud9 instance.
+  <Overview>This docker is an SSH endpoint for using as a remote host for AWS Cloud9. It will allow you to work with a local workspace on your unRAID system from within an AWS Cloud9 instance. [br][br]&#xD;
   [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
   [b]22[/b] The SSH port to connect to via AWS Cloud9. Use a different port than 22 so it does not interfere with unRAID. [br]&#xD;
   [b]/config[/b] This path is where the container will look for the file authorized_keys [br]&#xD;
