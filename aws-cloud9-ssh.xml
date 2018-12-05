@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Beta>True</Beta>
-  <Name>AWS Cloud9 SSH Host</Name>
+  <Name>aws-cloud9-ssh</Name>
   <Repository>dmaxwell/aws-cloud9-ssh</Repository>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/aws-cloud9-ssh/</Registry>
   <Network>bridge</Network>
