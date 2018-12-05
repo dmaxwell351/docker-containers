@@ -1,9 +1,12 @@
 #!/bin/bash
 set -eo pipefail
 
-mkdir -p /home/ubuntu/.ssh
-cp /config/authorized_keys /home/ubuntu/.ssh/authorized_keys 2>/dev/null || :
-chown -R ubuntu:users /home/ubuntu/.ssh /home/ubuntu/.ssh/authorized_keys 2>/dev/null || :
-chmod 700 /home/ubuntu/.ssh 2>/dev/null || :
-chmod 600 /home/ubuntu/.ssh/authorized_keys 2>/dev/null || :
-/usr/sbin/sshd -D
+su ubuntu
+mkdir -p ~/.ssh
+cp /config/authorized_keys ~/.ssh/authorized_keys 2>/dev/null || :
+chown -R ubuntu ~/.ssh ~/.ssh/authorized_keys 2>/dev/null || :
+chmod 700 ~/.ssh 2>/dev/null || :
+chmod 600 ~/.ssh/authorized_keys 2>/dev/null || :
+exit
+
+/usr/sbin/sshd -D -E /config/auth.log
