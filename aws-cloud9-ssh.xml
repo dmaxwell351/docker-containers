@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container version="1.0">
+<Container version="2">
   <Beta>True</Beta>
   <Name>AWS Cloud9 SSH Host</Name>
   <Repository>dmaxwell/aws-cloud9-ssh</Repository>
