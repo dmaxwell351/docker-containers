@@ -2,6 +2,7 @@
 set -eo pipefail
 
 usermod -u 99 ubuntu 2>/dev/null || :
+groupmod -g 999 users 2>/dev/null || :
 groupmod -g 100 ubuntu 2>/dev/null || :
 
 curl -o /home/ubuntu/install.sh -L https://raw.githubusercontent.com/c9/install/master/install.sh 2>/dev/null || :
