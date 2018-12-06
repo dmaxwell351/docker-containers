@@ -11,8 +11,6 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
-RUN curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash
-
 EXPOSE 22
 
 VOLUME ["/config", "/home/ec2-user/environment/project"]
