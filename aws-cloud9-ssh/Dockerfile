@@ -6,6 +6,8 @@ RUN apt-get update && \
 
 RUN apt-get install -y nodejs && ln -s /usr/bin/nodejs /usr/bin/node
 
+RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+
 COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
