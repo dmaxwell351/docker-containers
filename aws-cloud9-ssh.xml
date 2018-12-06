@@ -20,6 +20,7 @@
   The SSH username should be "ubuntu" and provide your public WAN address and port forwared to the port configured above.
   </Overview>
   <Category>Cloud: Productivity: Tools:</Category>
+  <WebUI>https://console.aws.amazon.com/cloud9/home</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/aws-cloud9-ssh.xml</TemplateURL>
   <Icon>https://i.postimg.cc/8CMMFwWC/cloud9-logo.png</Icon>
   <Description>This docker is an SSH endpoint for using as a remote host for AWS Cloud9. It will allow you to work with a local workspace on your unRAID system from within an AWS Cloud9 instance.</Description>
