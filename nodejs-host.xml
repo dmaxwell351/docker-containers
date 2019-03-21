@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>True</Beta>
+  <Name>nodejs-host</Name>
+  <Repository>dmaxwell/aws-cloud9-ssh</Repository>
+  <Registry>https://registry.hub.docker.com/u/dmaxwell/nodejs-host/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project></Project>
+  <Overview>This docker can be used to host a nodejs script.[br][br]&#xD;
+  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+  [b]/config[/b] This path is where the container will look for the files index.js and package.json.[br]&#xD;
+  [b][u][span style='color: #E80000;']Directions[/span][/u][/b][br]&#xD;
+  Copy your package.json file to /config along with your nodejs app, named index.js.
+  </Overview>
+  <Category>Cloud: Productivity: Tools:</Category>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/nodejs-host.xml</TemplateURL>
+  <Icon>https://i.postimg.cc/L6pJbJzT/360234.png</Icon>
+  <Description>This docker is a generic nodejs host.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/nodejs/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+<Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+<BaseImage>node:8</BaseImage>
+</Container>
