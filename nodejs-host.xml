@@ -10,9 +10,9 @@
   <Project></Project>
   <Overview>This docker can be used to host a nodejs script.[br][br]&#xD;
   [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
-  [b]/config[/b] This path is where the container will look for the files index.js and package.json.[br]&#xD;
+  [b]AppData Config Path:[/b] This path is where the container will look for the files index.js and package.json.[br]&#xD;
   [b][u][span style='color: #E80000;']Directions[/span][/u][/b][br]&#xD;
-  Copy your package.json file to /config along with your nodejs app, named index.js.
+  Copy your package.json file to the AppData Config Path along with your nodejs app, named index.js.
   </Overview>
   <Category>Cloud: Productivity: Tools:</Category>
   <WebUI></WebUI>
@@ -25,15 +25,10 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
       <ContainerDir>/home/nodejs/app</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+<Config Name="AppData Config Path" Target="/home/nodejs/app" Default="" Mode="rw" Description="Container Path: /home/nodejs/app" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
 <BaseImage>node:8</BaseImage>
 </Container>
