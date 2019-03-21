@@ -1,11 +1,9 @@
 FROM node:8
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
-#COPY docker-entrypoint.sh .
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
 
-#RUN chmod 777 docker-entrypoint.sh
+VOLUME ["/usr/src/app"]
 
-VOLUME ["/home/nodejs/app"]
-
-#ENTRYPOINT ["docker-entrypoint.sh"]
-ENTRYPOINT ["node"]
+ENTRYPOINT ["docker-entrypoint.sh"]
