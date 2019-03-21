@@ -3,6 +3,6 @@ MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 WORKDIR /home/nodejs/app
 
-VOLUME ["/config", "/home/nodejs/app"]
+VOLUME ["/home/nodejs/app"]
 
 ENTRYPOINT ["docker-entrypoint.sh"]
