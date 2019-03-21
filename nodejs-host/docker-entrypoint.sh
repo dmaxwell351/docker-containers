@@ -1,11 +1,10 @@
-#!/bin/bash
-set -eo pipefail
+FROM node:8
+MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
-#usermod -u 99 root
-#groupmod -g 102 users
-#groupmod -g 100 root
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
+RUN ln -s usr/local/bin/docker-entrypoint.sh /
 
-cd /usr/src/app
+VOLUME ["/usr/src/app"]
 
-npm install
-npm start
+ENTRYPOINT ["docker-entrypoint.sh"]
