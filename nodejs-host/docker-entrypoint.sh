@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-npm install --production
+cd /home/nodejs/app
 
+npm install --production
 node index.js
