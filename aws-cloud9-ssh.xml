@@ -48,6 +48,6 @@
   </Data>
 <Config Name="Host Port 1" Target="22" Default="22222" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="true" Mask="false"></Config>
 <Config Name="Host Path 1" Target="/home/ec2-user/environment/project" Default="" Mode="rw" Description="Container Path: /home/ec2-user/environment/project" Type="Path" Display="always" Required="true" Mask="false"></Config>
-<Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+<Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
 <BaseImage>cloud9/ws-nodejs</BaseImage>
 </Container>
