@@ -2,7 +2,7 @@
 <Container version="2">
   <Beta>True</Beta>
   <Name>nodejs-host</Name>
-  <Repository>dmaxwell/aws-cloud9-ssh</Repository>
+  <Repository>dmaxwell/nodejs-host</Repository>
   <Registry>https://registry.hub.docker.com/u/dmaxwell/nodejs-host/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
