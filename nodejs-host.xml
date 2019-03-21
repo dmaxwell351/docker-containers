@@ -25,10 +25,10 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/home/nodejs/app</ContainerDir>
+      <ContainerDir>/usr/src/app</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<Config Name="AppData Config Path" Target="/home/nodejs/app" Default="" Mode="rw" Description="Container Path: /home/nodejs/app" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+<Config Name="AppData Config Path" Target="/usr/src/app" Default="" Mode="rw" Description="Container Path: /usr/src/app" Type="Path" Display="always" Required="true" Mask="false"></Config>
 <BaseImage>node:8</BaseImage>
 </Container>
