@@ -1,11 +1,11 @@
 #!/bin/bash
 set -eo pipefail
 
-usermod -u 99 root 2>/dev/null || :
-groupmod -g 102 users 2>/dev/null || :
-groupmod -g 100 root 2>/dev/null || :
+#usermod -u 99 root
+#groupmod -g 102 users
+#groupmod -g 100 root
 
 cd /usr/src/app
 
-npm install --production
-node start
+npm install
+npm start
