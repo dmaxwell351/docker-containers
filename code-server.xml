@@ -17,6 +17,13 @@
   <Description></Description>
   <Networking>
     <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -25,6 +32,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
+<Config Name="Host Port 1" Target="8443" Default="8443" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="true" Mask="false"></Config>
 <Config Name="Project Path" Target="/root/project" Default="" Mode="rw" Description="Container Path: /root/project" Type="Path" Display="always" Required="true" Mask="false"></Config>
 <BaseImage>codercom/code-server</BaseImage>
 </Container>
