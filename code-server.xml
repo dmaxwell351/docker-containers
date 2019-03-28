@@ -3,6 +3,7 @@
   <Beta>True</Beta>
   <Name>code-server</Name>
   <Repository>codercom/code-server</Repository>
+  <PostArgs>--allow-http --no-auth</<PostArgs>
   <Registry>https://hub.docker.com/r/codercom/code-server</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
