@@ -1,10 +1,7 @@
-FROM node:8
-MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
+#!/bin/bash
+set -eo pipefail
 
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
-RUN ln -s usr/local/bin/docker-entrypoint.sh /
+cd /usr/src/app
 
-VOLUME ["/usr/src/app"]
-
-ENTRYPOINT ["docker-entrypoint.sh"]
+npm install
+npm start
