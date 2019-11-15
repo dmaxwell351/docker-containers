@@ -1,4 +1,4 @@
-FROM cloud9/ws-nodejs
+FROM cloud9/workspace
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
 RUN apt-get update && \
