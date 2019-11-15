@@ -4,6 +4,8 @@ MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 #RUN apt update && \
 #    apt install -y openssh-server
 
+RUN rm /etc/apt/sources.list.d/mongodb*.list
+RUN apt-get update
 RUN apt-get install -y openssh-server
 
 #RUN apt-get install -y nodejs && ln -s /usr/bin/nodejs /usr/bin/node
