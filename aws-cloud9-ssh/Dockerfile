@@ -1,10 +1,10 @@
 FROM cloud9/workspace
 MAINTAINER dmaxwell351 <dmaxwell351@sent.com>
 
-RUN apt-get update && \
-    apt-get install -y openssh-server
+#RUN apt-get update && \
+#    apt-get install -y openssh-server
 
-RUN apt-get install -y nodejs && ln -s /usr/bin/nodejs /usr/bin/node
+#RUN apt-get install -y nodejs && ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN echo "ubuntu:$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | chpasswd
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
