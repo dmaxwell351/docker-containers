@@ -13,8 +13,8 @@ RUN apt-get update && apt-get -y upgrade \
     && cd /infinitude \
     && cpanm Mojolicious::Lite CHI DateTime Try::Tiny Path::Tiny JSON IO::Termios
 
-COPY ./entrypoint.sh /
+COPY entrypoint.sh /usr/local/bin/
 
 EXPOSE 3000
 
-ENTRYPOINT /entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
