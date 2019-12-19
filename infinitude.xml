@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>True</Beta>
+  <Name>infinitude</Name>
+  <Repository>dmaxwell/infinitude</Repository>
+  <Registry>https://registry.hub.docker.com/u/dmaxwell/infinitude/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project></Project>
+  <Overview>
+  </Overview>
+  <Category>Cloud: Productivity: Tools:</Category>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/infinitude.xml</TemplateURL>
+  <Icon>https://i.postimg.cc/05FLvBrP/bryant-logo.jpg</Icon>
+  <Description></Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+  </Data>
+<Config Name="Host Port 1" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+<BaseImage>ubuntu:latest</BaseImage>
+</Container>
