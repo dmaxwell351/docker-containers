@@ -15,6 +15,16 @@
   <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/beta-templates/infinitude.xml</TemplateURL>
   <Icon>https://i.postimg.cc/05FLvBrP/bryant-logo.jpg</Icon>
   <Description></Description>
+  <Environment>
+    <Variable>
+      <Name>APP_SECRET</Name>
+      <Value>YOUR_SECRET_HERE</Value>
+    </Variable>
+    <Variable>
+      <Name>PASS_REQS</Name>
+      <Value>1020</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
