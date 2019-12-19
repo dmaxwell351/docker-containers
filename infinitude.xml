@@ -38,5 +38,14 @@
   <Data>
   </Data>
 <Config Name="Host Port 1" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+<Config 
+       Type="Variable" 
+       Name="Plex Pass Username" 
+       Target="APP_SECRET" 
+       Default="" 
+       Description="" 
+       Mask="false" 
+       Display="always" 
+       Required="true">YOUR_SECRET_HERE</Config>
 <BaseImage>ubuntu:latest</BaseImage>
 </Container>
